@@ -7,6 +7,7 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject player;
+    private Vector3 offset = new Vector3(0, 4.8F, -4.2F);
     void Start()
     {
         
@@ -16,6 +17,6 @@ public class FollowPlayer : MonoBehaviour
     void Update()
     {
         //añadimos un offset para que la cámara mantenga la posición mientras persigue el vehículo
-        transform.position = player.transform.position + new Vector3(0,4.8F,-4.2F);
+        transform.position = player.transform.position + offset;
     }
 }
