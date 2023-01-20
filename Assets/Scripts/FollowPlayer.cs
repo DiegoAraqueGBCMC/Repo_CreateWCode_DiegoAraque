@@ -15,6 +15,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.transform.position;
+        //añadimos un offset para que la cámara mantenga la posición mientras persigue el vehículo
+        transform.position = player.transform.position + new Vector3(0,4.8F,-4.2F);
     }
 }
